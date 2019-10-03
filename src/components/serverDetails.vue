@@ -2,10 +2,10 @@
     <div>
    <v-card class="mx-auto list-group-item cards" >
          <v-card-text>
-                <h2>Server Details are currently not updated</h2>
-                     <div class="mx-auto list-group-item cards" :key ="index" v-for="index in 5" max-width="344"> 
+                <h2>Server Details</h2>
+                     <div class="mx-auto list-group-item cards" max-width="344"> 
            
-                  <h3 >  Server #{{ index }} </h3>
+                  <h3 >  Server #{{ test.index }} </h3>
                   <h4> Server Status: {{ test }} </h4>
               
                 </div>

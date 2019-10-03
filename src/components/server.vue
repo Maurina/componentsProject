@@ -24,7 +24,8 @@
     export default {
         data: function(){
             return{
-                test: "normal",
+                
+                test: "",
                 message: ["Critical", "Client Error", "Server Error", "Success", "Bad Request", "Not Found"],
             }
         },
