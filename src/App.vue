@@ -9,7 +9,7 @@
     <app-server></app-server>
         </v-col>
         <v-col>
-    <app-serverDetails></app-serverDetails>
+    <app-serverDetails :test="normal"></app-serverDetails>
         </v-col>
     </v-row>
     </v-container>

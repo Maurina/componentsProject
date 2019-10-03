@@ -9,7 +9,7 @@
                 </div>
               </v-card-text>
               <v-card-actions>
-                <v-btn text color="teal accent-4"> 
+                <v-btn @click="serverStatus" text color="teal accent-4"> 
                   Test
                 </v-btn>
               </v-card-actions>
@@ -20,8 +20,19 @@
 </template>
 
 <script>
-export default {
-    
+    import { eventBus } from '../main'
+    export default {
+        data: function(){
+            return{
+                test: "normal"
+            }
+        },
+    methods: {
+        serverStatus() {
+            this.test = ["critical", ""]
+            eventBus.$emit('testRun', this.test)
+        }
+    }
 }
 </script>
 
