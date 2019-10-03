@@ -10,7 +10,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-btn @click="serverStatus" text color="teal accent-4"> 
-                  Test
+                  Details
                 </v-btn>
               </v-card-actions>
           
@@ -24,13 +24,15 @@
     export default {
         data: function(){
             return{
-                test: "normal"
+                test: "normal",
+                message: ["Critical", "Client Error", "Server Error", "Success", "Bad Request", "Not Found"],
             }
         },
     methods: {
         serverStatus() {
-            this.test = ["critical", ""]
+            this.test = this.message[Math.floor(Math.random()*this.message.length)]
             eventBus.$emit('testRun', this.test)
+           
         }
     }
 }

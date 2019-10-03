@@ -1,6 +1,7 @@
 <template>
     <div>
-  
+   <v-card class="mx-auto list-group-item cards" >
+         <v-card-text>
                 <h2>Server Details are currently not updated</h2>
                      <div class="mx-auto list-group-item cards" :key ="index" v-for="index in 5" max-width="344"> 
            
@@ -8,7 +9,9 @@
                   <h4> Server Status: {{ test }} </h4>
               
                 </div>
-           <button @click="resetStatus">Clear Status</button>
+           <v-btn @click="resetStatus" text color="teal accent-4">Clear Status</v-btn>
+         </v-card-text>
+   </v-card>
     </div>
 </template>
 
@@ -23,7 +26,7 @@ export default {
     },
     methods: {
         resetStatus(){
-            this.test = "unknown"
+            this.test = ""
         }
     },
     created() {
