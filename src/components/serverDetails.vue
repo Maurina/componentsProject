@@ -5,7 +5,7 @@
                 <h2>Server Details</h2>
                      <div class="mx-auto list-group-item cards" max-width="344"> 
            
-                  <h3 >  Server #{{ id }} </h3>
+                  <!-- <h3 >  Server #{{ id }} </h3> -->
                   <h4> Server Status: {{ test }} </h4>
               
                 </div>
