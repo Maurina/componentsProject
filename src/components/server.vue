@@ -1,10 +1,10 @@
 <template>
     <div> 
-            <v-card class="mx-auto list-group-item cards" :key ="index" v-for="index in 5" max-width="344">
+            <v-card class="mx-auto list-group-item cards" :key ="id" v-for="id in ids" max-width="344">
               <v-card-text>
                 <div>
                
-                  <h2>  Server #{{ index }} </h2>
+                  <h2>  Server #{{ id }} </h2>
                 
                 </div>
               </v-card-text>
@@ -24,7 +24,7 @@
     export default {
         data: function(){
             return{
-                
+                ids: [1,2,3,4,5],
                 test: "",
                 message: ["Critical", "Client Error", "Server Error", "Success", "Bad Request", "Not Found"],
             }
